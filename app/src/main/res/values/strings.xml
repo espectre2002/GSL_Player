@@ -2,4 +2,12 @@
     <string name="app_name">GSL Player</string>
     <string name="iniciar">Iniciar Sesion</string>
     <string name="registrate">Registrarse</string>
+    <string name="correo">Correo/Usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="sesion">Inicia Sesion</string>
+    <string name="ayuda">Nesesitas ayuda??</string>
+    <string name="click">Clik Here</string>
+    <string name="olvide">Olvide mi contraseña</string>
+    <string name="entrar">Entrar</string>
+    <string name="Notengo">No tienes una cuenta??</string>
 </resources>

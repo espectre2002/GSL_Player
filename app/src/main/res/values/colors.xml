@@ -11,5 +11,7 @@
     <color name="Botones">#EC0FFF</color>
     <color name="Play">#EC0E0E</color>
     <color name="TextoGris">#A0A0A0</color>
+    <color name="secundario">#A7A7A7</color>
+    <color name="olvide">#AEAEAE</color>
 
 </resources>
