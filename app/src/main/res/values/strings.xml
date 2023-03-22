@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GSL Player</string>
+    <string name="iniciar">Iniciar Sesion</string>
+    <string name="registrate">Registrarse</string>
+</resources>
