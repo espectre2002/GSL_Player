@@ -21,7 +21,7 @@ public class PantallCarga extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(PantallCarga.this,Bienvenido.class));
+                startActivity(new Intent(PantallCarga.this, Bienvenido.class));
                 finish();
             }
         },Tiempo);

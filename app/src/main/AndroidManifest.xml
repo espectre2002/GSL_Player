@@ -15,6 +15,13 @@
         android:theme="@style/Theme.GSLPlayer"
         tools:targetApi="31">
         <activity
+            android:name=".registro"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Bienvenido"
             android:exported="false">
             <meta-data
