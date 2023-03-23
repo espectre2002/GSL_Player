@@ -2,7 +2,7 @@
     <string name="app_name">GSL Player</string>
     <string name="iniciar">Iniciar Sesion</string>
     <string name="registrate">Registrarse</string>
-    <string name="correo">Correo/Usuario</string>
+    <string name="correo">Correo electronico</string>
     <string name="contraseña">Contraseña</string>
     <string name="sesion">Inicia Sesion</string>
     <string name="ayuda">Nesesitas ayuda??</string>
@@ -11,7 +11,7 @@
     <string name="entrar">Entrar</string>
     <string name="Notengo">No tienes una cuenta??</string>
     <string name="cuenta">Crear Cuenta</string>
-    <string name="nombre">Nombre completo</string>
+    <string name="nombre">Nombre de usuario</string>
     <string name="ingresar">Ya tienes una cuenta??</string>
     <string name="entrarS">Iniciar sesion</string>
 
@@ -23,7 +23,6 @@
     <string name="explorer">Explorar</string>
     <string name="Like">Favoritos</string>
     <string name="perfil">Perfil</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_home">Home</string>
     <string name="title_home">Home</string>
