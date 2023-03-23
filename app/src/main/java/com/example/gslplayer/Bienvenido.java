@@ -27,7 +27,7 @@ public class Bienvenido extends AppCompatActivity {
         btnregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Bienvenido.this, registro.class));
+                startActivity(new Intent(Bienvenido.this, Registro.class));
 
             }
         });

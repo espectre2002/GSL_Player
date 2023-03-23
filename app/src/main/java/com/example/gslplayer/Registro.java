@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class registro extends AppCompatActivity {
+public class Registro extends AppCompatActivity {
     TextView txtregistrar;
 
     @Override
@@ -19,7 +19,7 @@ public class registro extends AppCompatActivity {
         txtregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(registro.this,MainActivity.class));
+                startActivity(new Intent(Registro.this,MainActivity.class));
 
             }
         });

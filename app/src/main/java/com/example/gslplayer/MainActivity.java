@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         txtregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, registro.class));
+                startActivity(new Intent(MainActivity.this, Registro.class));
             }
         });
         btnentrar.setOnClickListener(new View.OnClickListener() {
