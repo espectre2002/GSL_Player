@@ -54,12 +54,13 @@
         app:layout_constraintVertical_bias="0.746" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/correo"
         android:ems="10"
         android:fontFamily="@font/satoshibold"
+        android:hint="@string/nombre"
         android:inputType="textPersonName"
         android:text="@string/nombre"
         android:textColor="@color/secundario"
@@ -71,12 +72,13 @@
         app:layout_constraintVertical_bias="0.404" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/etEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/correo"
         android:ems="10"
         android:fontFamily="@font/satoshibold"
+        android:hint="@string/correo"
         android:inputType="textPersonName"
         android:text="@string/correo"
         android:textColor="@color/secundario"
@@ -88,11 +90,12 @@
         app:layout_constraintVertical_bias="0.514" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etContra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/correo"
         android:ems="10"
+        android:hint="@string/contraseña"
         android:inputType="textPersonName"
         android:text="@string/contraseña"
         android:textColor="@color/secundario"

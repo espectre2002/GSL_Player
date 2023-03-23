@@ -42,7 +42,7 @@
         app:layout_constraintVertical_bias="0.7" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/correo"
@@ -59,7 +59,7 @@
         app:layout_constraintVertical_bias="0.427" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etContra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/correo"
