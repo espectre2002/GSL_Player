@@ -29,6 +29,7 @@
     <string name="title_dashboard">explorar</string>
     <string name="title_notifications">Favoritos</string>
     <string name="agregado">Exclusivos para ti</string>
+    <string name="list">Mis favoritas</string>
 
 
 </resources>
