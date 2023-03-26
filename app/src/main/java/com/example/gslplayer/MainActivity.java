@@ -41,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
         ePassword = findViewById(R.id.etContra);
         eUser = findViewById(R.id.etUsuario);
 
+        btnentrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                login();
+            }
+        });
+
         txtregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,10 +68,16 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             if (task.isSuccessful()) {
-                                for (QueryDocumentSnapshot document : task.getResult()) {
-                                    Log.d(TAG, document.getId() + " => " + document.getData());
-                                    System.out.println(document.getId() + " => " + document.getData());
+                                if(task.getResult().size() > 0){
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        Log.d(TAG, document.getId() + " => " + document.getData());
+                                        System.out.println(document.getId() + " => " + document.getData());
+                                        startActivity(new Intent(MainActivity.this, Menu.class));
+                                    }
+                                } else {
+                                    Toast.makeText(MainActivity.this, "Contraseña y/o correo no coinciden", Toast.LENGTH_LONG).show();
                                 }
+
                             } else {
                                 Toast.makeText(MainActivity.this, "Contraseña y/o correo no coinciden", Toast.LENGTH_LONG).show();
                             }

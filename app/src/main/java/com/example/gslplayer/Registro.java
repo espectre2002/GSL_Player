@@ -63,12 +63,6 @@ public class Registro extends AppCompatActivity {
     public void registerUser(){
         if (eName.getText().toString().length() > 0 && eEmail.getText().toString().length() > 0 && ePassoword.getText().toString().length() > 0){
             FirebaseFirestore db = FirebaseFirestore.getInstance();
-            Map<String, Object> user = new HashMap<>();
-
-            user.put("name", eName.getText().toString());
-            user.put("email", eEmail.getText().toString());
-            user.put("password", ePassoword.getText().toString());
-            user.put("avatar", null);
 
             db.collection("users")
                     .whereEqualTo("email", eEmail.getText().toString())
@@ -77,42 +71,52 @@ public class Registro extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             if (task.isSuccessful()) {
-                                for (QueryDocumentSnapshot document : task.getResult()) {
-                                    Log.d(TAG, document.getId() + " => " + document.getData());
-                                    System.out.println(document.getId() + " => " + document.getData());
+                                if (task.getResult().size() > 0){
+                                    Toast.makeText(Registro.this, "Email ya registrado", Toast.LENGTH_SHORT).show();
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        System.out.println(document.getId() + " => " + document.getData());
+                                    }
+                                } else {
+                                    insertData();
                                 }
+
                             } else {
                                 Log.d(TAG, "Error getting documents: ", task.getException());
                             }
                         }
                     });
-            System.out.println(emailNotRegister);
-            if(emailNotRegister){
-                db.collection("users")
-                        .add(user)
-                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                            @Override
-                            public void onSuccess(DocumentReference documentReference) {
-                                Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                                startActivity(new Intent(Registro.this, MainActivity.class));
-                                eEmail.setText("");
-                                eName.setText("");
-                                ePassoword.setText("");
-
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.w(TAG, "Error adding document", e);
-                            }
-                        });
-            } else {
-                Toast.makeText(this, "Email ya registrado", Toast.LENGTH_LONG).show();
-            }
         } else {
             Toast.makeText(this, "Todos los campos son requeridos", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    public void insertData(){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Map<String, Object> user = new HashMap<>();
+
+        user.put("name", eName.getText().toString());
+        user.put("email", eEmail.getText().toString());
+        user.put("password", ePassoword.getText().toString());
+        user.put("avatar", null);
+        db.collection("users")
+                .add(user)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                        startActivity(new Intent(Registro.this, MainActivity.class));
+                        eEmail.setText("");
+                        eName.setText("");
+                        ePassoword.setText("");
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error adding document", e);
+                    }
+                });
     }
 }
