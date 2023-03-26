@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class PantallCarga extends AppCompatActivity {
 
     @Override
@@ -19,7 +21,7 @@ public class PantallCarga extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(PantallCarga.this,Bienvenido.class));
+                startActivity(new Intent(PantallCarga.this, Bienvenido.class));
                 finish();
             }
         },Tiempo);
